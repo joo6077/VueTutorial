@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    </head>
+    <body>
+        <div id="app">
+            <!-- <template v-if="number === 1">
+                <div>1</div>
+                <div>2</div>
+                <div>3</div>
+            </template>
+            <div v-else-if="number === 2">Hi</div>
+            <div v-else>No</div> -->
+            <div v-show="show">Yes</div>
+            <br>
+            <button @click="toggleButton">toggle</button>
+            <button @click="increaseNum">Increase</button> {{number}}
+        </div>
+        <script>
+            new Vue({
+                el: '#app',
+                data: {
+                   show: true,
+                   number: 1
+                },
+                methods: {
+                    toggleButton() {
+                        this.show = !this.show;
+                    },
+                    increaseNum() {
+                        this.number++
+                    }
+                },
+                
+            })
+        </script>
+    </body>
+</html>
